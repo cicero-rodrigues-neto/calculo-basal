@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcuto Basal Met`s</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="texto">
+        <h1 class="titulo">Calculo Basal em Met`s</h1>
+        <p class="paragrafo">MET, do inglês <em>equivalent intensity level</em> , ou múltiplos de equivalentes metabólicos, é uma medida que estima o gasto energético. Ela avalia a quantidade de oxigênio consumida por uma pessoa em repouso, peso corporal e intensidade de diferentes tipos de exercício físico. Considere, então, que 1 MET = 3,5ml O2/Kg/min </p>
+    </div>
+
+    <div class="container">
+        <div class="cc-resultado">
+        <div class="calculo">
+            <h2>Massa Magra</h2>
+            <input size="1" id="campo1" maxlength="5" value="" type="text" placeholder="Ex:33,33" onblur="calcular()">
+            <button id="butao">Calcular</button>
+        </div>
+        
+        <div class="calculo-final">
+        <h2>Resultado</h2>
+            <input type="text" readonly="readonly" size="1" id="resultado" maxlength="4" placeholder="Kcal">
+        </div> 
+    </div>
+    
+
+           <div class="mtk-container">
+        <p class="mtk-texto"><span>Massa magra: </span> está em todas as partes do corpo humano que não são formadas por gordura. Nessa categoria se encaixam, por exemplo, ossos, músculos, órgãos e líquidos corporais. Calculo: Peso total - Gordura%. </p>
+        
+        <p class="mtk-texto"><span>Taxa metabólica basal: </span>Também conhecida como gasto energético basal, é a quantidade de energia que o corpo, em repouso, gasta para manter as suas funções vitais, como respiração, batimentos do coração e manutenção da temperatura corporal.</p>
+
+        <p class="mtk-texto"><span>Kcal: </span>Sinalizada com a abreviatura cal, é uma unidade de medida que define a quantidade de energia para elevar em 1ºC a temperatura de 1 grama (o equivalente a 1 mililitro) de água.</p>
+    </div>
+</div>
+
+    
+
+
+    <script> 
+
+function calcular(){
+    var valor1 = parseInt(document.getElementById('campo1').value, 10);
+    
+    document.getElementById('resultado').value = Math.trunc(3.5 * valor1 * 1440 / 1000 *5 * 1.1 * 1.1) + " " +"Kcal";
+}
+
+    </script>
+</body>
+</html>
