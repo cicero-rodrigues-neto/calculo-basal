@@ -1,10 +1,12 @@
-let met = 3.5;
-let massaMagra = "";
-let minutos = 1440;
-let litros = 1000;
-let oxigenio = 5;
-let calculo = (met * massaMagra * minutos / litros * oxigenio)
 
+function calcular(){
+    var valor1 = parseInt(document.getElementById('campo1').value, 10);
+    
+    document.getElementById('resultado').value = Math.trunc(3.5 * valor1 * 1440 / 1000 *5 * 1.1 * 1.1) + " " +"Kcal";
+}
 
-console.log(calculo)
-document.getElementById("butao").onclick
+function calcular2() {
+    var valor2 = parentInt(document.getElementById('calculo2').value, 10);
+
+    document.getElementById('resultado3').value = Math.trunc(getElementById('calculo2') * getElementById('calculo3') * getElementById('calculo4')) + " " + "Kcal";
+}
