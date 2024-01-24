@@ -12,88 +12,181 @@
 </head>
 
 <body>
-    <header>
-        <img src="./assets/basal.svg" alt="Logo basal">
+    <header class="header">
+        <nav class="navbar">
+            <img src="./assets/basal.svg" alt="Logo basal">
+        </nav>
     </header>
-    <div class="texto">
-        <h1 class="titulo">Calculo Basal em Met's</h1>
-        <p class="paragrafo">MET, do inglês <em>equivalent intensity level</em> , ou múltiplos de equivalentes metabólicos, é uma medida que estima o gasto energético. Ela avalia a quantidade de oxigênio consumida por uma pessoa em repouso, peso corporal e intensidade de diferentes tipos de exercício físico. Considere, então, que 1 MET = 3,5ml O2/Kg/min. </p>
-    </div>
-
-    <div class="container">
-        <div class="cc-resultado">
-        <div class="calculo">
-            <h2>Massa Magra - KG</h2>
-            <input size="1" id="campo1" maxlength="5" value="" type="text" placeholder="Ex:33,33" onblur="calcular()">
-            <button id="butao">Calcular</button>
+    <div class="container-principal">
+        <div class="texto">
+            <h1 class="titulo">O que é MET?</h1>
+            <p class="paragrafo">MET, do inglês <em>equivalent intensity level</em> , ou múltiplos de equivalentes
+                metabólicos, é uma medida que estima o gasto energético. Ela avalia a quantidade de oxigênio consumida
+                por
+                uma pessoa em repouso, peso corporal e intensidade de diferentes tipos de exercício físico. Considere,
+                então, que 1 MET = 3,5ml O2/Kg/min. </p>
         </div>
-        
-        <div class="calculo-final">
-        <h2>Resultado</h2>
-            <input type="text" readonly="readonly" size="1" id="resultado" maxlength="4" placeholder="Kcal">
-        </div> 
+
+        <div class="container-resultado">
+            <div class="cc-resultado">
+                <h2 class="titulo-calc">Calculo Basal em repouso</h2>
+                <div class="calculo">
+                    <h2>Massa Magra - KG</h2>
+                    <input size="1" id="campo1" maxlength="5" value="" type="text" placeholder="Ex: 50.75"
+                        onblur="calcular()">
+                    <button id="butao">Calcular</button>
+                </div>
+
+                <div class="calculo-final">
+                    <h2>Resultado</h2>
+                    <p id="resultado"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-met-exerc">
+        <div class="mtk-container-exerc">
+            <h1 class="h1">Met Exercicios</h1>
+            <p class="mtk-texto2">MET para cada tipo de exercício físico, e ele varia de acordo com a intensidade da
+                prática. O cálculo para se chegar ao seu consumo de calorias é simples e a fórmula apresenta um
+                número aproximado de calorias perdidas. Naturalmente, esse não é um resultado exato, já que podemos
+                considerar muitas variáveis,
+                como a intensidade, o clima, as variabilidades corporais, entre outras. Mesmo que não seja tão preciso,
+                é
+                uma maneira de controlar quantas calorias foram gastas.</p>
+        </div>
+        <div class="container-table">
+            <div class="overflow">
+        <table class="tabela">
+            <tbody class="tbody">
+                <tr>
+                    <th><strong>Exercício</strong></th>
+                    <th><strong>Intensidade</strong></th>
+                    <th><strong>MET</strong></th>
+                </tr>
+                <tr>
+                    <td>Ciclismo</td>
+                    <td>Alta competição em montanha</td>
+                    <td>16.0</td>
+                </tr>
+                <tr>
+                    <td>Ciclismo (lazer, intensidade baixa/moderada)</td>
+                    <td>Baixa/moderada, lazer</td>
+                    <td>4.0</td>
+                </tr>
+                <tr>
+                    <td>Ciclismo Estacionário</td>
+                    <td>Moderada</td>
+                    <td>6.8</td>
+                </tr>
+                <tr>
+                    <td>Funcional</td>
+                    <td>Alta</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>Musculação</td>
+                    <td>Baixa, exercícios variados (repetições 8-15)</td>
+                    <td>3.5</td>
+                </tr>
+                <tr>
+                    <td>Musculação</td>
+                    <td>Alta, levantamento de peso,</td>
+                    <td>6.0</td>
+                </tr>
+                <tr>
+                    <td>Pilates</td>
+                    <td>Moderada</td>
+                    <td>3.0</td>
+                </tr>
+                <tr>
+                    <td>Alongamento</td>
+                    <td>Baixa</td>
+                    <td>2.3</td>
+                </tr>
+                <tr>
+                    <td>Yoga,&nbsp; Hatha</td>
+                    <td>Moderado</td>
+                    <td>2.5</td>
+                </tr>
+                <tr>
+                    <td>Dança</td>
+                    <td>Ensaio ou aula (ballet/jazz)</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td>Atividades domésticas</td>
+                    <td>cozinhar, lavar louças, limpar cozinha</td>
+                    <td>3.3</td>
+                </tr>
+                <tr>
+                    <td>Corrida</td>
+                    <td>13 minutos/milha</td>
+                    <td>6.0</td>
+                </tr>
+                <tr>
+                    <td>Corrida</td>
+                    <td>12 minutos/milha</td>
+                    <td>8.3</td>
+                </tr>
+                <tr>
+                    <td>Corrida</td>
+                    <td>9 minutos/milha</td>
+                    <td>10.5</td>
+                </tr>
+                <tr>
+                    <td>Basquete</td>
+                    <td>Treino geral</td>
+                    <td>6.5</td>
+                </tr>
+                <tr>
+                    <td>Vôlei</td>
+                    <td>Areia, esforço moderado</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>Hidroginástica</td>
+                    <td>Moderado</td>
+                    <td>5.5</td>
+                </tr>
+                <tr>
+                    <td>Futebol</td>
+                    <td>Jogo/competição</td>
+                    <td>8.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <div class="container-atividade">
+            <div class="container-section">
+                <label>MET da atividade física realizada</label>
+                <input type="text" placeholder="Ex: 5" id="calculoMet" required>
+                <label for="">Peso corporal - KG</label>
+                <input type="text" placeholder="Ex: 70" id="calculoPc" required>
+                <label for="">Tempo de atividade</label>
+                <input type="text" step=".01" placeholder="Ex:'0.30' min / '1' hora" id="calculoTempo" required>
+                <button id="butao2" onclick="calcularExercicio()">Calcular</button>
+                <label for="">Resultado</label>
+                <p id="resultadoAtividade"></p>
+            </div>
+        </div>
     </div>
 </div>
-<!-- <div class="cc-resultado2">
-    <div class="calculo2">
-        <h1 class="tabela">Met das atividades fisicas</h1>
-        <h2 class="part2">Tabela</h2>
-        <select name="Atividade" id="calculo2" onblur="calcular2()">
-            <option selected="" value="">Selecione a Atividade</option>
-            <option value="">Ioga Moderado - 2,5 </option>
-            <option value="">Corrida Intensa (13,5km/h) - 13,5</option>
-            <option value="">Ciclismo Moderado(18km/h) - 6.0</option>
-            <option value="">Futebol(Recreação) - 7.0</option>
-        </select>
-        <button id="butao2">Calcular</button>
-            
-            <h2 class="part2">Peso corporal</h2>
-            <input type="text" placeholder="Ex:70kg" id="calculo3">
-            <h2 class="part2">Tempo de atividade</h2>
-            <input type="text" placeholder="Ex:'0,30' min / '1' hora" id="calculo4">
-            <h2 class="part2">Resultado</h2>
-            <input type="text"  size="1" id="resultado3" maxlength="10" placeholder="Kcal">
+<footer class="footer">
+<div class="footer__copy">
+    © Copyright Cicero Rodrigues. Todos os direitos reservados
+ </div>
+</footer> 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-    
-    <div class="mtk-container2">
-        <h1 class="h1">Met Exercicios</h1>
-        <p class="mtk-texto2">MET para cada tipo de exercício físico, e ele varia de acordo com a intensidade da prática. Assim, a corrida a 15km/h possui um MET superior à corrida a 8km/h.</p>
-        
-        <p class="mtk-texto2">O cálculo  para se chegar ao seu consumo de calorias é simples e a fórmula apresenta um número aproximado de calorias perdidas.</p>
-            <p class="mtk-texto2">Naturalmente, esse não é um resultado exato, já que podemos considerar muitas variáveis, como a intensidade, o clima, as variabilidades corporais, entre outras. Mesmo que não seja tão preciso, é uma maneira de controlar quantas calorias foram gastas.</p>
-
-        <p class="mtk-texto2"><span>Exemplo: </span> Um atleta com peso de 75 kg que se propõe a andar de bicicleta pelo período de 1 hora. O MET para andar de bicicleta de forma intensa é 10,0. Através da formula: 10,0 x 75 x 1 = 750 calorias queimadas.</p>
     </div>
-</div>
-
-
-<footer>
-    <ul class="sobre">
-        <li>
-            <a href="#assinaturas">Assinaturas</a>
-        </li>
-        <li>
-            <a href="#quemsomos">Quem Somos</a>
-        </li>
-        <li>
-            <a href="#faleconosco">Fale Conosco</a>
-        </li>
-        <li>
-            <a href="politica">Politica de Privacidade</a>
-        </li>
-    </ul>
-
-    <ul class="icones-sociais">
-        <li>
-            <a href="" target="blank"><i class="fa-brands fa-facebook-square"></i></a>
-        </li>
-        <li>
-            <a href="" target=blank><i class="fa-brands fa-instagram"></i></a>
-        </li>
-        <li>
-            <a href="" target="blank"><i class="fa-brands fa-tiktok"></i></i></a>
-        </li>
-    </ul>
-</footer> -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
+
 </html>
