@@ -1,20 +1,12 @@
 
 function calcular(){
     var valor1 = parseInt(document.getElementById('campo1').value, 10);
-    var calcBasal = 3.5 * valor1 * 1440 / 1000 *5 * 1.1 * 1.1;
-
-    var decimailCalc = Math.trunc(calcBasal)
-    document.querySelector('#resultado').innerHTML = decimailCalc + " " +"Kcal";
     
+    document.getElementById('resultado').value = Math.trunc(3.5 * valor1 * 1440 / 1000 *5 * 1.1 * 1.1) + " " +"Kcal";
 }
 
-function calcularExercicio() {
-    var calc1 = parseInt(document.querySelector('#calculoMet').value);
-    var calc2 = parseInt(document.querySelector('#calculoPc').value);
-    var calc3 =  Math.abs(document.querySelector('#calculoTempo').value);
-    var calc4 = (calc3 / 60);
+function calcular2() {
+    var valor2 = parentInt(document.getElementById('calculo2').value, 10);
 
-    var MostrarResultado = parseInt(calc1) * parseInt(calc2) * parseFloat(calc4) * 100;
-    var semDecimal = Math.trunc(MostrarResultado);
-    document.querySelector('#resultadoAtividade').innerHTML = semDecimal + " " +"Kcal";
+    document.getElementById('resultado3').value = Math.trunc(getElementById('calculo2') * getElementById('calculo3') * getElementById('calculo4')) + " " + "Kcal";
 }
