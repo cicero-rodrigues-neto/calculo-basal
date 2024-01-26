@@ -107,7 +107,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .mtk-container-exerc h1 {
@@ -117,6 +117,7 @@ body {
 .mtk-texto2 {
     line-height: 1.7;
     margin-top: 10px;
+    max-width: 950px;
 }
 
 .overflow {
@@ -205,7 +206,7 @@ tr:hover {
     font-size: medium;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 20px;
+    margin: 10px 0 20px 0;
     cursor: pointer;
 }
 
@@ -245,6 +246,7 @@ tr:hover {
     .calculo button {
         width: 100%;
         margin-left: 0;
+        margin-bottom: 20px;
     }
 
     .calculo-final p {
@@ -272,6 +274,28 @@ tr:hover {
         padding: 0 20px;
     }
 }
+
+@media screen and (min-width: 577px) {
+    .container-principal {
+        margin: 20px;
+    }
+
+    .cc-resultado {
+        width: 250px;
+    }
+
+    .calculo button {
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .container-met-exerc {
+        padding: 20px;
+    }
+}
+
+
 
 /* Scroll */
 /* Firefox */

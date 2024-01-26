@@ -1,7 +1,7 @@
 
 function calcular(){
     var valor1 = parseInt(document.getElementById('campo1').value, 10);
-    var calcBasal = 3.5 * valor1 * 1440 / 1000 *5 * 1.1 * 1.1;
+    var calcBasal = 3.5 * valor1 * 1440 / 1000 * 5 * 1.1 * 1.1;
 
     var decimailCalc = Math.trunc(calcBasal)
     document.querySelector('#resultado').innerHTML = decimailCalc + " " +"Kcal";
